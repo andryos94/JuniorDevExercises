@@ -5,6 +5,14 @@ public class Vehicle {
 	private int noPersons;
 	private String name;
 	
+	public int getNoPersons() {
+		return noPersons;
+	}
+
+	public String getName() {
+		return name;
+	}
+	
 	public String getSerialNumber() {
 		return serialNumber;
 	}
@@ -25,6 +33,12 @@ public class Vehicle {
 	}
 	
 	public boolean addFuel(double amount) {
-		
+		System.out.println("Error: unknown type of vehicle…");
+		return false;
+	}
+	
+	public void printInfo() {
+		System.out.println("Vehicle properties:\n\t - serial number: " + getSerialNumber() +
+				"\n\t - capacity: " + getNoPersons() + " persons\n\t - name: " + getName());
 	}
 }

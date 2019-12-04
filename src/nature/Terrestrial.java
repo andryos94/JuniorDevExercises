@@ -30,5 +30,9 @@ public class Terrestrial extends Animal {
 	public void fight() {
 		System.out.println("The terrestrial animal is now fighting!!");
 	}
+	
+	public void camouflage() {
+		System.out.println("Terrestrial animals can camouflage!");
+	}
 
 }

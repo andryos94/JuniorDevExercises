@@ -9,7 +9,7 @@ public class Animal {
 		this.color = color;
 	}
 	public void eat() {
-		System.out.println("Animals can eat.");
+		System.out.println(this.name + ", the " + this.color + " animal, can eat.");
 	}
 
 }

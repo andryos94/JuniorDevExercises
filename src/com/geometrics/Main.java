@@ -24,10 +24,11 @@ public class Main {
 		listShapes.add(t1);
 		listShapes.add(t2);
 		
-		for(int i = 0; i < listShapes.size(); i++) {
-			System.out.println(listShapes.get(i).toString());
-			System.out.println(listShapes.get(i).getSize());
+		for(Shape item: listShapes) {
+			System.out.println(item.toString());
+			System.out.println(item.getSize());
 		}
+		System.out.println();
 		
 		///downcasting
 		for(int i = 0; i < listShapes.size(); i++) {

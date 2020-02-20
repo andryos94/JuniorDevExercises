@@ -8,7 +8,7 @@ public class MyStack<T> {
 	private List<T> l = new LinkedList<T>();
 
 	public void push(T e) {
-		l.add(e);
+		l.add(0, e);
 	}
 
 	public T pop() {
@@ -17,5 +17,10 @@ public class MyStack<T> {
 	
 	public T peek() {
 		return l.get(0);
+	}
+	
+	@Override
+	public String toString() {
+		return l.toString();
 	}
 }

@@ -42,13 +42,14 @@ public class ExpressionEvaluator {
 				postFixedFormQueue.add(ch);
 			}
 
-			if (isOperator(ch) && !operatorsStack.isEmpty()) {
-				char ch2 = operatorsStack.peek();
-				while (!operatorsStack.isEmpty() && ch2 != '('
-						&& ((precedenta(ch) < precedenta(ch2)) || (precedenta(ch) == precedenta(ch2) && ch2 != '^'))) {
-					char c = operatorsStack.pop();
-					postFixedFormQueue.add(c);
+			if (isOperator(ch)) {
+				if (!operatorsStack.isEmpty()) {
+					while (!operatorsStack.isEmpty() &&  operatorsStack.peek() != '(' && ((precedenta(ch) < precedenta(operatorsStack.peek()))
+							|| (precedenta(ch) == precedenta(operatorsStack.peek()) && operatorsStack.peek() != '^'))) {
+						char c = operatorsStack.pop();
+						postFixedFormQueue.add(c);
 
+					}
 				}
 				operatorsStack.push(ch);
 			}
@@ -68,7 +69,6 @@ public class ExpressionEvaluator {
 				}
 				operatorsStack.pop();
 			}
-			System.out.println(postFixedFormQueue.toString());
 		}
 
 		while (!operatorsStack.isEmpty()) {

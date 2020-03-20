@@ -1,0 +1,5 @@
+The short word is: si
+The longest word is: prune
+The first ordered word is: Ana
+The last ordered word is: si
+The total number of words is: 5
